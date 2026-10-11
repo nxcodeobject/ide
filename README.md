@@ -19,8 +19,9 @@ aksen biru) — **bukan** tiruan editor di HTML.
    bagian "dibangun di atas NXC SDK", daftar pintasan, dan bagian unduh.
 2. **Tanpa dependency & tanpa framework** — HTML + CSS + JavaScript murni
    (aturan proyek). Tidak ada CDN.
-3. **Visual = screenshot asli**, bukan editor bikinan HTML. Gambar disalin ke
-   `website/img/` supaya situs bisa dideploy sendirian.
+3. **Visual = screenshot asli**, bukan editor bikinan HTML. Galeri membaca
+   `website/img/screenshot-001.png` … dan menyembunyikan seksinya bila gambar
+   tidak ada. Kartu "welcome" di hero dibuat dari CSS, bukan editor tiruan.
 4. **Tema gelap default + opsi terang**, warna mengikuti VS Code
    (aksen `#0078d4`, latar `#1e1e1e`).
 5. **Server statis sendiri** `website/serve.mjs` (`node:http`, Node sudah ada)
@@ -35,14 +36,15 @@ aksen biru) — **bukan** tiruan editor di HTML.
 | `website/style.css` | tema gelap/terang, layout responsif |
 | `website/index.js` | ganti tema, nav seluler, lightbox, tombol salin, animasi masuk |
 | `website/serve.mjs` | server statis `node:http` di port 8085 |
-| `website/img/` | salinan screenshot aplikasi (galeri) |
+| `website/img/` | screenshot aplikasi untuk galeri (opsional) |
 | `package.json` | tambah script `web` (aditif) |
 
 ## Status
 
-- [x] Screenshot disalin ke `website/img/`
 - [x] `index.html`, `style.css`, `index.js` diisi
+- [x] Galeri opsional (auto-deteksi `website/img/`; screenshot proyek saat ini kosong)
 - [x] `serve.mjs` + script `web`
 - [x] Diverifikasi di `http://localhost:8085/`
+- [x] Di-commit & push ke `https://github.com/nxcodeobject/ide`
 
 **SUDAH DIEKSEKUSI ✅**
