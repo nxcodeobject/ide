@@ -45,6 +45,58 @@ aksen biru) — **bukan** tiruan editor di HTML.
 - [x] Galeri opsional (auto-deteksi `website/img/`; screenshot proyek saat ini kosong)
 - [x] `serve.mjs` + script `web`
 - [x] Diverifikasi di `http://localhost:8085/`
-- [x] Di-commit & push ke `https://github.com/nxcodeobject/ide`
+- [x] Di-commit & push ke `https://github.com/iyanrsaleh/nxcode-ide` (disatukan ke repo editor; repo lama `nxcodeobject/ide` ditinggalkan)
 
 **SUDAH DIEKSEKUSI ✅**
+
+---
+
+# RENCANA — installer lintas-platform (Linux .tar.gz/.deb/.AppImage, macOS .app)
+
+## Masalah
+
+- `npm run dist` (`scripts/nxc.mjs`) hanya menghasilkan installer **Windows**
+  (Inno Setup -> `dist\NxCode-IDE-Setup-1.0.0.exe`). Di Linux/macOS hanya
+  membuat `tar.gz`/zip portable.
+- Website mengklaim "Unduh untuk Windows" saja; padahal target unduhan perlu
+  mencakup 3 OS.
+
+## Keputusan desain
+
+1. **Windows**: tidak diubah — Inno Setup tetap default (sudah benar).
+2. **Linux**: `npm run dist` menghasilkan **tar.gz** (sudah ada) + opsi
+   `.deb` (fpm) dan `.AppImage` (linuxdeploy). Tool tidak ada -> lewati dengan
+   pesan jelas, jangan gagal (mirip pola Inno Setup yang fallback ke zip).
+3. **macOS**: hasilkan `.app`/`.dmg`. Wajib di-build **di mesin macOS**;
+   script hanya menyiapkan jalurnya, tidak bisa diuji dari Windows.
+4. **Website**: bagian unduh jadi per-OS (Windows / macOS / Linux) dan teks
+   "Unduh untuk Windows" diganti netral + pilihan OS.
+
+## Perubahan file yang direncanakan
+
+| Berkas | Perubahan |
+| --- | --- |
+| `scripts/nxc.mjs` | `dist()`: cabang Linux (.deb + .AppImage opsional, fallback tar.gz) & macOS (.app/.dmg opsional, fallback tar.gz) |
+| `website/index.html` | Bagian unduh + hero CTA per-OS, kebutuhan per platform |
+| `website/index.js` | Deteksi OS pengunjung, tandai tombol unduh yang relevan |
+| `website/style.css` | Gaya tombol unduhan per-OS |
+
+## Status
+
+- [x] `scripts/nxc.mjs`: cabang Linux (`.deb` via `--deb`, `.AppImage` via `--appimage`,
+      fallback tar.gz) + macOS (`.dmg` via macdeployqt/hdiutil, fallback tar.gz).
+      Tool belum ada -> dilewati dengan pesan jelas, tidak menggagalkan build.
+- [x] `CMakeLists.txt`: `MACOSX_BUNDLE ${APPLE}` (Windows/Linux tetap FALSE).
+- [x] `website/index.html` + `index.js` + `style.css`: bagian unduh per-OS
+      (Windows/macOS/Linux) + deteksi OS pengunjung.
+- [x] Diverifikasi: `node --check` bersih; halaman terlayani 200 di port 8085.
+
+### Catatan uji (jujur)
+
+- **Windows**: jalur tidak berubah; `dist/NxCode-IDE-Setup-1.0.0.exe` sudah ada.
+- **Linux**: WSL Ubuntu ada, tetapi Qt6 dev + `fpm`/`linuxdeployqt`/
+  `appimagetool` belum terpasang -> **belum diuji build nyata**, hanya cabang
+  script diverifikasi.
+- **macOS**: **tidak dapat diuji dari Windows**; perlu dijalankan di mesin Mac.
+
+**SUDAH DIEKSEKUSI ✅** (Linux/macOS masih perlu uji di mesin aslinya)

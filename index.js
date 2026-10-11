@@ -186,6 +186,59 @@
     else if (e.key === "ArrowRight") showShot(current + 1);
   });
 
+  /* --- Pilih sistem operasi di bagian unduh ----------------------------- */
+  (function osPicker() {
+    var tabs = $$(".os-tab");
+    if (!tabs.length) return;
+    var section = $("downloadGrid");
+    var storageKey = "nxcode-website-os";
+    var known = ["windows", "macos", "linux"];
+
+    function detectOS() {
+      var saved = null;
+      try { saved = localStorage.getItem(storageKey); } catch (e) { saved = null; }
+      if (saved && known.indexOf(saved) !== -1) return saved;
+      var ua = (navigator.userAgent || "") + " " + (navigator.platform || "");
+      if (/mac/i.test(ua)) return "macos";
+      if (/linux|x11/i.test(ua)) return "linux";
+      return "windows";
+    }
+
+    function apply(os) {
+      if (!section) return;
+      known.forEach(function (name) { section.classList.remove("os-active-" + name); });
+      section.classList.add("os-active-" + os);
+      tabs.forEach(function (t) {
+        var on = t.getAttribute("data-os") === os;
+        t.classList.toggle("active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+      });
+      var label = { windows: "Windows", macos: "macOS", linux: "Linux" }[os];
+      var cta = document.querySelector("[data-os-cta]");
+      if (cta) cta.textContent = "Unduh untuk " + label;
+      var dl = document.querySelector("[data-dl]");
+      if (dl) {
+        var url = dl.getAttribute("data-dl-" + os);
+        if (url) dl.setAttribute("href", url);
+        // macOS belum punya berkas unduhan -> jangan pasang atribut download,
+        // cukup arahkan ke halaman rilis.
+        if (os === "macos") {
+          dl.removeAttribute("download");
+          dl.textContent = "Lihat rilis";
+        } else {
+          dl.setAttribute("download", "");
+          dl.textContent = "Unduh untuk " + label;
+        }
+      }
+      try { localStorage.setItem(storageKey, os); } catch (e) { /* diabaikan */ }
+    }
+
+    tabs.forEach(function (t) {
+      t.addEventListener("click", function () { apply(t.getAttribute("data-os")); });
+    });
+    apply(detectOS());
+  })();
+
   /* --- Tahun footer otomatis (kalau ada penanda) ------------------------ */
   var yearEl = $("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();

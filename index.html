@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NxCode IDE — Editor kode desktop di atas NXC SDK</title>
+    <title>NxCode IDE — editor kode desktop yang ringan</title>
     <meta
       name="description"
-      content="NxCode IDE: editor kode desktop untuk NXC — explorer, pencarian, source control, API client, database, terminal agen AI, dan editor dengan penyorotan sintaks 400+ bahasa. Dibangun dengan C++ dan Qt 6 di atas NXC SDK."
+      content="NxCode IDE: editor kode desktop untuk Windows dan Linux — explorer, pencarian, source control, API client, database, terminal agen AI, dan penyorotan sintaks 400+ bahasa dalam satu jendela yang ringan."
     />
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="style.css" />
@@ -22,7 +22,7 @@
         <nav class="nav-links" id="navLinks">
           <a href="#fitur">Fitur</a>
           <a href="#tangkapan">Tangkapan Layar</a>
-          <a href="#nxc">NXC SDK</a>
+          <a href="#nxc">Tentang</a>
           <a href="#pintasan">Pintasan</a>
           <a href="#unduh">Unduh</a>
         </nav>
@@ -46,19 +46,19 @@
       <div class="hero-glow"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">Dibangun di atas NXC SDK · Qt 6 · C++</span>
-          <h1>Editor kode desktop<br />untuk <span class="grad">NXC</span>.</h1>
+          <span class="eyebrow">Desktop native · Windows &amp; Linux</span>
+          <h1>Editor kode desktop<br />yang <span class="grad">ringan</span>.</h1>
           <p class="lead">
             NxCode IDE menyatukan explorer, pencarian, source control, API client,
             database, dan terminal agen AI dalam satu jendela yang ringan — lalu
             dilengkapi editor dengan penyorotan sintaks lebih dari 400 bahasa.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary btn-lg" href="#unduh">Unduh untuk Windows</a>
+            <a class="btn btn-primary btn-lg" href="#unduh" data-os-cta>Unduh sekarang</a>
             <a class="btn btn-ghost btn-lg" href="#fitur">Lihat fitur</a>
           </div>
           <p class="hero-meta">
-            v1.0.0 · Windows 10/11 (64-bit) · installer ± 31 MB
+            v1.0.0 · Windows &amp; Linux · Windows ± 54 MB, Linux ± 10 MB
           </p>
         </div>
         <div class="hero-visual reveal">
@@ -254,36 +254,37 @@
       </div>
     </section>
 
-    <!-- ===================== NXC SDK ===================== -->
+    <!-- ===================== TENTANG PRODUK ===================== -->
     <section class="section section-alt" id="nxc">
       <div class="wrap nxc-grid">
         <div class="reveal">
-          <span class="eyebrow">Filosofi</span>
-          <h2>NXC menyediakan HOW.<br />Developer menentukan WHAT.</h2>
+          <span class="eyebrow">Kenapa NxCode IDE</span>
+          <h2>Ringan, native,<br />dan langsung produktif.</h2>
           <p class="lead">
-            NXC mengurus mekanisme — window, menu, tema, settings, event, runtime
-            bridge. Developer mengurus isi: editor, explorer, build, dan
-            business logic. Itulah sebabnya jendela NxCode IDE terasa native
-            tanpa harus menulis manajemen window sendiri.
+            NxCode IDE dirancang sebagai satu jendela untuk seluruh alur kerja:
+            buka proyek, tulis kode, jalankan terminal, kelola versi, uji API,
+            dan telusuri database — tanpa berpindah-pindah aplikasi. Semuanya
+            berjalan sebagai aplikasi desktop native yang cepat dan hemat
+            memori.
           </p>
           <ul class="check-list">
-            <li>Window frameless, title bar, resize, dan system tray dari NXC.</li>
-            <li>Tema dan settings persisten siap pakai.</li>
-            <li>Event bus dan context menu sebagai mekanisme.</li>
+            <li>Buka dalam sekejap — tanpa peramban, tanpa runtime berat.</li>
+            <li>Penyorotan sintaks 400+ bahasa siap dipakai.</li>
+            <li>Tema gelap/terang dan pengaturan yang tersimpan otomatis.</li>
           </ul>
         </div>
         <div class="reveal">
           <table class="matrix">
             <thead>
-              <tr><th>Area</th><th>NXC</th><th>Developer</th></tr>
+              <tr><th>Yang kamu butuhkan</th><th>NxCode IDE</th></tr>
             </thead>
             <tbody>
-              <tr><td>Window, title bar, resize</td><td class="yes">✓</td><td>—</td></tr>
-              <tr><td>Theme &amp; settings</td><td>mekanisme</td><td class="yes">pilihan</td></tr>
-              <tr><td>Menu bar aplikasi</td><td>wadah</td><td class="yes">isi</td></tr>
-              <tr><td>Editor &amp; syntax highlight</td><td>—</td><td class="yes">✓</td></tr>
-              <tr><td>Explorer / sidebar</td><td>—</td><td class="yes">✓</td></tr>
-              <tr><td>Build system &amp; terminal</td><td>—</td><td class="yes">✓</td></tr>
+              <tr><td>Editor kode dengan penyorotan sintaks</td><td class="yes">✓</td></tr>
+              <tr><td>Autocomplete per tipe berkas</td><td class="yes">✓</td></tr>
+              <tr><td>Explorer &amp; pencarian proyek</td><td class="yes">✓</td></tr>
+              <tr><td>Terminal &amp; agen AI</td><td class="yes">✓</td></tr>
+              <tr><td>Source control dan build</td><td class="yes">✓</td></tr>
+              <tr><td>API client &amp; database designer</td><td class="yes">✓</td></tr>
             </tbody>
           </table>
         </div>
@@ -322,48 +323,79 @@
     </section>
 
     <!-- ===================== UNDUH ===================== -->
-    <section class="section" id="unduh">
-      <div class="wrap download-grid">
+    <section class="section" id="unduh" data-os-default="windows">
+      <div class="wrap download-grid os-active-windows" id="downloadGrid">
         <div class="reveal">
           <span class="eyebrow">Unduh</span>
           <h2>Jalankan NxCode IDE di komputermu</h2>
           <p class="lead">
-            Installer dibuat lokal dari folder proyek — belum ada berkas unduhan
-            yang di-host. Berikut langkahnya.
+            Pilih sistem operasimu, unduh paketnya, lalu langsung jalankan —
+            tanpa perlu menyiapkan tool build apa pun.
           </p>
+
+          <div class="os-tabs" id="osTabs" role="tablist" aria-label="Pilih sistem operasi">
+            <button class="os-tab" data-os="windows" role="tab">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M3 5.6l7.4-1v7.1H3zM11.6 4.4L21 3v9.7h-9.4zM3 12.9h7.4v7.1L3 19zM11.6 13H21v8.9l-9.4-1.3z"/></svg>
+              Windows
+            </button>
+            <button class="os-tab" data-os="macos" role="tab" title="Segera hadir">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M16.4 12.7c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .7 1.1 1.6 2.3 2.7 2.2 1.1 0 1.5-.7 2.8-.7 1.3 0 1.6.7 2.7.7 1.1 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.4-.9-2.4-3.6zM14.3 5.9c.6-.7 1-1.7.9-2.7-.9 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6 1 .1 2-.5 2.5-1.2z"/></svg>
+              macOS <span class="soon">segera</span>
+            </button>
+            <button class="os-tab" data-os="linux" role="tab">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true"><path d="M12 2c-2 0-3.2 1.5-3.2 3.6 0 1.2.1 2.2-.4 3.2C7.6 10.3 6 11.8 5.3 14c-.7 2.2-.2 4.2.9 5.3.9.9 2.3 1.2 3.6.9.9-.2 1.6-.4 2.2-.4s1.3.2 2.2.4c1.3.3 2.7 0 3.6-.9 1.1-1.1 1.6-3.1.9-5.3-.7-2.2-2.3-3.7-3.1-5.2-.5-1-.4-2-.4-3.2C15.2 3.5 14 2 12 2zm-1.2 4.1c.4 0 .7.4.7.8s-.3.8-.7.8-.7-.4-.7-.8.3-.8.7-.8zm2.4 0c.4 0 .7.4.7.8s-.3.8-.7.8-.7-.4-.7-.8.3-.8.7-.8zM12 8.6c.7 0 1.4.6 1.4 1.1 0 .6-.7 1.2-1.4 1.2s-1.4-.6-1.4-1.2c0-.5.7-1.1 1.4-1.1z"/></svg>
+              Linux
+            </button>
+          </div>
 
           <div class="reqs">
             <h4>Kebutuhan</h4>
-            <ul class="check-list">
+            <ul class="check-list" data-req="windows">
               <li>Windows 10 (1809+) atau Windows 11, 64-bit.</li>
-              <li>Visual Studio 2022 + Qt 6.8.3 (MSVC 2022) untuk membangun.</li>
-              <li>NXC SDK 0.3.x.</li>
+              <li>NxCode IDE — cukup unduh dan jalankan installer.</li>
+            </ul>
+            <ul class="check-list" data-req="macos">
+              <li>macOS 12+ (Intel atau Apple Silicon), 64-bit.</li>
+              <li>Belum tersedia — paket <code>.dmg</code> untuk macOS sedang disiapkan.</li>
+            </ul>
+            <ul class="check-list" data-req="linux">
+              <li>Distribusi Linux 64-bit dengan Qt 6 (mis. Ubuntu 22.04+).</li>
+              <li>Ekstrak <code>tar.gz</code> lalu jalankan <code>./editor</code>.</li>
             </ul>
           </div>
 
           <div class="cta-row">
-            <a class="btn btn-primary btn-lg" href="#beranda">Kembali ke atas</a>
-            <span class="hero-meta">NxCode-IDE-Setup-1.0.0.exe</span>
+            <a class="btn btn-primary btn-lg" href="https://github.com/nxcodeobject/nxcode-ide/releases/latest/download/NxCode-IDE-Setup-1.0.0.exe" data-dl data-dl-windows="https://github.com/nxcodeobject/nxcode-ide/releases/latest/download/NxCode-IDE-Setup-1.0.0.exe" data-dl-macos="https://github.com/nxcodeobject/nxcode-ide/releases" data-dl-linux="https://github.com/nxcodeobject/nxcode-ide/releases/latest/download/NxCode-IDE-1.0.0-linux-x64.tar.gz" download>Unduh untuk Windows</a>
+            <a class="btn btn-ghost btn-lg" href="https://github.com/nxcodeobject/nxcode-ide/releases" target="_blank" rel="noopener">Semua rilis</a>
           </div>
+          <p class="hero-meta" data-artifact="windows">NxCode-IDE-Setup-1.0.0.exe</p>
+          <p class="hero-meta" data-artifact="macos">Belum tersedia</p>
+          <p class="hero-meta" data-artifact="linux">NxCode-IDE-1.0.0-linux-x64.tar.gz</p>
         </div>
 
         <div class="steps reveal">
           <div class="step">
-            <div class="step-head"><span>1</span> Bangun versi rilis</div>
-            <pre><code id="cmd1">npm run release</code><button class="copy" data-copy="cmd1">Salin</button></pre>
-            <p>Menghasilkan <code>build\Release\editor.exe</code>.</p>
+            <div class="step-head"><span>1</span> Unduh</div>
+            <p class="step-note" data-out="windows">
+              Unduh <code>NxCode-IDE-Setup-1.0.0.exe</code>, lalu jalankan.
+              Karena belum ditandatangani, Windows SmartScreen mungkin muncul —
+              pilih <b>More info</b> lalu <b>Run anyway</b>.
+            </p>
+            <p class="step-note" data-out="macos">
+              Paket macOS belum tersedia. Nantikan rilisnya di halaman
+              <a href="https://github.com/nxcodeobject/nxcode-ide/releases" target="_blank" rel="noopener">GitHub Releases</a>.
+            </p>
+            <p class="step-note" data-out="linux">
+              Unduh <code>NxCode-IDE-1.0.0-linux-x64.tar.gz</code>, ekstrak, lalu
+              jalankan <code>./editor</code>. Pastikan Qt 6 terpasang di sistem.
+            </p>
           </div>
           <div class="step">
-            <div class="step-head"><span>2</span> Buat installer</div>
-            <pre><code id="cmd2">npm run dist</code><button class="copy" data-copy="cmd2">Salin</button></pre>
-            <p>Menghasilkan <code>dist\NxCode-IDE-Setup-1.0.0.exe</code>.</p>
-          </div>
-          <div class="step">
-            <div class="step-head"><span>3</span> Bagikan</div>
+            <div class="step-head"><span>2</span> Jalankan</div>
             <p class="step-note">
-              Kirim berkas installer tadi. Karena belum ditandatangani, Windows
-              SmartScreen mungkin muncul — pilih <b>More info</b> lalu
-              <b>Run anyway</b>.
+              Buka aplikasi, lalu mulai mengerjakan proyekmu: buka folder,
+              tulis kode, dan jalankan terminal agen AI — semuanya dari satu
+              jendela.
             </p>
           </div>
         </div>
@@ -383,14 +415,14 @@
         <div class="footer-links">
           <a href="#fitur">Fitur</a>
           <a href="#tangkapan">Tangkapan Layar</a>
-          <a href="#nxc">NXC SDK</a>
+          <a href="#nxc">Tentang</a>
           <a href="#pintasan">Pintasan</a>
           <a href="#unduh">Unduh</a>
         </div>
       </div>
       <div class="wrap footer-bottom">
-        <span>© 2026 NxCode IDE — dibuat dengan NXC SDK.</span>
-        <span>C++ · Qt 6 · KSyntaxHighlighting</span>
+        <span>© 2026 NxCode IDE.</span>
+        <span>Cepat · Native · Multi-platform</span>
       </div>
     </footer>
 

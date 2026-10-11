@@ -266,6 +266,38 @@ kbd {
 .reqs { margin: 22px 0; }
 .reqs h4 { font-size: 14px; text-transform: uppercase; letter-spacing: .06em; color: var(--fg-faint); margin-bottom: 8px; }
 
+/* Pemilih OS di bagian unduh — JS menandai satu tab .active dan menampilkan
+   elemen [data-req]/[data-out]/[data-artifact] yang cocok. Tanpa JS, semua
+   tab tampak biasa dan blok Windows (default) tetap terbaca. ----------------- */
+.os-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 4px; }
+.os-tab {
+  display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+  padding: 9px 16px; border-radius: 8px; font-size: 14.5px; font-family: inherit;
+  border: 1px solid var(--border); background: var(--surface); color: var(--fg-dim);
+}
+.os-tab:hover { color: var(--fg); border-color: var(--accent); }
+.os-tab.active { color: #fff; background: var(--accent); border-color: var(--accent); }
+.os-tab svg { flex: none; }
+.os-tab .soon {
+  font-size: 10.5px; text-transform: uppercase; letter-spacing: .04em;
+  padding: 1px 6px; border-radius: 999px; margin-left: 2px;
+  background: var(--surface-2); color: var(--fg-faint); border: 1px solid var(--border);
+}
+.os-tab[data-os="macos"] { opacity: .55; }
+[data-req], [data-out], [data-artifact] { display: none; }
+.os-active-windows [data-req="windows"],
+.os-active-windows [data-out="windows"],
+.os-active-windows [data-artifact="windows"],
+.os-active-macos [data-req="macos"],
+.os-active-macos [data-out="macos"],
+.os-active-macos [data-artifact="macos"],
+.os-active-linux [data-req="linux"],
+.os-active-linux [data-out="linux"],
+.os-active-linux [data-artifact="linux"] { display: block; }
+.os-active-windows [data-out="windows"].step-note,
+.os-active-macos [data-out="macos"].step-note,
+.os-active-linux [data-out="linux"].step-note { display: block; }
+
 .steps { display: flex; flex-direction: column; gap: 16px; }
 .step { border: 1px solid var(--border); border-radius: 12px; background: var(--surface); padding: 18px 20px; }
 .step-head { display: flex; align-items: center; gap: 10px; font-weight: 600; margin-bottom: 12px; }
