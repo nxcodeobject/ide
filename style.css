@@ -130,6 +130,14 @@ code { font-family: "Cascadia Code", Consolas, monospace; font-size: .88em; }
 .lang-switch button:hover { color: var(--fg); }
 .lang-switch button.active { background: var(--accent); color: #fff; }
 
+/* Tombol Sponsor (GitHub Sponsors) — warna pink khas */
+.btn-sponsor {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: #db61a2; border-color: #db61a2;
+}
+.btn-sponsor:hover { background: rgba(219, 97, 162, .12); border-color: #db61a2; }
+.footer-sponsor { color: #db61a2; }
+
 /* ---- Nav -------------------------------------------------------------- */
 .nav {
   position: sticky; top: 0; z-index: 50;
