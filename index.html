@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NxCode IDE — editor kode desktop yang ringan</title>
+    <title data-i18n="meta.title">NxCode IDE — editor kode desktop yang ringan</title>
     <meta
       name="description"
       content="NxCode IDE: editor kode desktop untuk Windows dan Linux — explorer, pencarian, source control, API client, database, terminal agen AI, dan penyorotan sintaks 400+ bahasa dalam satu jendela yang ringan."
+      data-i18n-attr="content|meta.desc"
     />
     <link rel="icon" type="image/png" href="icon.png" />
     <link rel="stylesheet" href="style.css" />
@@ -20,20 +21,24 @@
           <span>NxCode <b>IDE</b></span>
         </a>
         <nav class="nav-links" id="navLinks">
-          <a href="#fitur">Fitur</a>
-          <a href="#tangkapan">Tangkapan Layar</a>
-          <a href="#nxc">Tentang</a>
-          <a href="#pintasan">Pintasan</a>
-          <a href="#unduh">Unduh</a>
+          <a href="#fitur" data-i18n="nav.fitur">Fitur</a>
+          <a href="#tangkapan" data-i18n="nav.tangkapan">Tangkapan Layar</a>
+          <a href="#nxc" data-i18n="nav.tentang">Tentang</a>
+          <a href="#pintasan" data-i18n="nav.pintasan">Pintasan</a>
+          <a href="#unduh" data-i18n="nav.unduh">Unduh</a>
         </nav>
         <div class="nav-actions">
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-lang-btn="id" class="active">ID</button>
+            <button type="button" data-lang-btn="en">EN</button>
+          </div>
           <button class="icon-btn" id="themeBtn" title="Ganti tema" aria-label="Ganti tema">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
               <circle cx="12" cy="12" r="8.4" />
               <path d="M12 3.6a8.4 8.4 0 0 0 0 16.8z" fill="currentColor" stroke="none" />
             </svg>
           </button>
-          <a class="btn btn-primary" href="#unduh">Unduh</a>
+          <a class="btn btn-primary" href="#unduh" data-i18n="nav.unduhBtn">Unduh</a>
           <button class="burger" id="burger" aria-label="Menu">
             <span></span><span></span><span></span>
           </button>
@@ -46,16 +51,16 @@
       <div class="hero-glow"></div>
       <div class="wrap hero-grid">
         <div class="hero-copy reveal">
-          <span class="eyebrow">Desktop native · Windows &amp; Linux</span>
-          <h1>Editor kode desktop<br />yang <span class="grad">ringan</span>.</h1>
-          <p class="lead">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Desktop native · Windows &amp; Linux</span>
+          <h1 data-i18n="hero.title">Editor kode desktop<br />yang <span class="grad">ringan</span>.</h1>
+          <p class="lead" data-i18n="hero.lead">
             NxCode IDE menyatukan explorer, pencarian, source control, API client,
             database, dan terminal agen AI dalam satu jendela yang ringan — lalu
             dilengkapi editor dengan penyorotan sintaks lebih dari 400 bahasa.
           </p>
           <div class="cta-row">
-            <a class="btn btn-primary btn-lg" href="#unduh" data-os-cta>Unduh sekarang</a>
-            <a class="btn btn-ghost btn-lg" href="#fitur">Lihat fitur</a>
+            <a class="btn btn-primary btn-lg" href="#unduh" data-os-cta data-i18n="hero.dl">Unduh sekarang</a>
+            <a class="btn btn-ghost btn-lg" href="#fitur" data-i18n="hero.features">Lihat fitur</a>
           </div>
           <p class="hero-meta">
             v1.0.0 · Windows &amp; Linux · Windows ± 54 MB, Linux ± 10 MB
@@ -66,27 +71,27 @@
             <img class="wc-logo" src="icon.png" alt="NxCode IDE" />
             <div class="wc-title">NxCode IDE</div>
             <div class="wc-sub">Nusantara eXtreme Development Object Model</div>
-            <div class="wc-head">Built-in features</div>
+            <div class="wc-head" data-i18n="wc.head">Built-in features</div>
             <ul class="wc-list">
               <li>
                 <span class="wc-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h6l2 2h4v6a1 1 0 0 1-1 1H3z"/></svg></span>
-                <div><b>Explorer</b><i>Tree view, drag &amp; drop, buat / ganti nama / hapus.</i></div>
+                <div><b>Explorer</b><i data-i18n="wc.explorer">Tree view, drag &amp; drop, buat / ganti nama / hapus.</i></div>
               </li>
               <li>
                 <span class="wc-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="7" cy="7" r="4.4"/><path d="M10.2 10.2 14 14"/></svg></span>
-                <div><b>Search</b><i>Pencarian di berkas dan seluruh proyek.</i></div>
+                <div><b>Search</b><i data-i18n="wc.search">Pencarian di berkas dan seluruh proyek.</i></div>
               </li>
               <li>
                 <span class="wc-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 3v6a3 3 0 0 0 3 3h3"/><circle cx="4" cy="3" r="1.6"/><circle cx="12" cy="12" r="1.6"/></svg></span>
-                <div><b>Source Control</b><i>Repositori, status, commit, push / pull.</i></div>
+                <div><b>Source Control</b><i data-i18n="wc.scm">Repositori, status, commit, push / pull.</i></div>
               </li>
               <li>
                 <span class="wc-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 2v3M10 2v3"/><path d="M4 5h8v2.5a4 4 0 0 1-8 0z"/><path d="M8 11.5V14"/></svg></span>
-                <div><b>API Client</b><i>Klien REST: susun permintaan, kirim, periksa respons.</i></div>
+                <div><b>API Client</b><i data-i18n="wc.api">Klien REST: susun permintaan, kirim, periksa respons.</i></div>
               </li>
               <li>
                 <span class="wc-ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 4.5 3.5 6 6 3.5M2 10.5 3.5 12 6 9.5"/><path d="M8 4.5h6M8 10.5h6"/></svg></span>
-                <div><b>Skill / Plan</b><i>AGENTS.md, daftar plan, dan riwayat simpan.</i></div>
+                <div><b>Skill / Plan</b><i data-i18n="wc.skill">AGENTS.md, daftar plan, dan riwayat simpan.</i></div>
               </li>
             </ul>
           </div>
@@ -97,10 +102,10 @@
     <!-- ===================== STAT STRIP ===================== -->
     <section class="strip">
       <div class="wrap strip-grid">
-        <div><b>400+</b><span>bahasa ter-sorot</span></div>
-        <div><b>1–4</b><span>panel editor</span></div>
-        <div><b>9</b><span>panel bawaan</span></div>
-        <div><b>0</b><span>dependency UI</span></div>
+        <div><b>400+</b><span data-i18n="strip.lang">bahasa ter-sorot</span></div>
+        <div><b>1–4</b><span data-i18n="strip.panes">panel editor</span></div>
+        <div><b>9</b><span data-i18n="strip.panels">panel bawaan</span></div>
+        <div><b>0</b><span data-i18n="strip.dep">dependency UI</span></div>
       </div>
     </section>
 
@@ -108,8 +113,8 @@
     <section class="section" id="fitur">
       <div class="wrap">
         <header class="section-head reveal">
-          <h2>Semua yang kamu butuhkan, dalam satu jendela</h2>
-          <p>
+          <h2 data-i18n="fitur.title">Semua yang kamu butuhkan, dalam satu jendela</h2>
+          <p data-i18n="fitur.sub">
             Setiap panel berdiri sebagai modulnya sendiri di dalam <code>src/</code>,
             jadi mudah dipelajari dan dikembangkan.
           </p>
@@ -123,8 +128,8 @@
                 <path d="M2.5 9h19M7 6.5h.01M9.5 6.5h.01" />
               </svg>
             </div>
-            <h3>Editor inti</h3>
-            <p>Nomor baris, find/replace mengambang, indentasi Tab/Shift+Tab, dan indikator baris aktif.</p>
+            <h3 data-i18n="card.editor.t">Editor inti</h3>
+            <p data-i18n="card.editor.d">Nomor baris, find/replace mengambang, indentasi Tab/Shift+Tab, dan indikator baris aktif.</p>
           </article>
 
           <article class="card reveal">
@@ -134,8 +139,8 @@
                 <circle cx="19" cy="16" r="2.4" />
               </svg>
             </div>
-            <h3>Penyorotan sintaks</h3>
-            <p>KSyntaxHighlighting memilih grammar otomatis dari ekstensi — lebih dari 400 bahasa, tema gelap/terang.</p>
+            <h3 data-i18n="card.highlight.t">Penyorotan sintaks</h3>
+            <p data-i18n="card.highlight.d">KSyntaxHighlighting memilih grammar otomatis dari ekstensi — lebih dari 400 bahasa, tema gelap/terang.</p>
           </article>
 
           <article class="card reveal">
@@ -147,7 +152,7 @@
               </svg>
             </div>
             <h3>Autocomplete</h3>
-            <p>Saran kata per tipe berkas: keyword bahasa, tag, atribut, properti CSS, kunci JSON, hingga anggota objek.</p>
+            <p data-i18n="card.ac.d">Saran kata per tipe berkas: keyword bahasa, tag, atribut, properti CSS, kunci JSON, hingga anggota objek.</p>
           </article>
 
           <article class="card reveal">
@@ -158,7 +163,7 @@
               </svg>
             </div>
             <h3>Minimap</h3>
-            <p>Kolom ringkasan berwarna token di kanan editor, lengkap dengan indikator viewport yang bisa diklik.</p>
+            <p data-i18n="card.minimap.d">Kolom ringkasan berwarna token di kanan editor, lengkap dengan indikator viewport yang bisa diklik.</p>
           </article>
 
           <article class="card reveal">
@@ -167,8 +172,8 @@
                 <path d="M3 6h6l2 2h10v10a2 2 0 0 1-2 2H3z" />
               </svg>
             </div>
-            <h3>Explorer &amp; berkas</h3>
-            <p>Tree view dengan drag &amp; drop, buat / ganti nama / hapus ke Recycle Bin, tempel gambar, dan filter.</p>
+            <h3 data-i18n="card.explorer.t">Explorer &amp; berkas</h3>
+            <p data-i18n="card.explorer.d">Tree view dengan drag &amp; drop, buat / ganti nama / hapus ke Recycle Bin, tempel gambar, dan filter.</p>
           </article>
 
           <article class="card reveal">
@@ -178,8 +183,8 @@
                 <path d="M15 15l5 5" />
               </svg>
             </div>
-            <h3>Pencarian</h3>
-            <p>Cari di dalam berkas maupun seluruh proyek, hasilnya bisa diklik untuk langsung membuka barisnya.</p>
+            <h3 data-i18n="card.search.t">Pencarian</h3>
+            <p data-i18n="card.search.d">Cari di dalam berkas maupun seluruh proyek, hasilnya bisa diklik untuk langsung membuka barisnya.</p>
           </article>
 
           <article class="card reveal">
@@ -192,7 +197,7 @@
               </svg>
             </div>
             <h3>Source Control</h3>
-            <p>Status perubahan, commit, push dan pull langsung dari sidebar — tanpa keluar dari editor.</p>
+            <p data-i18n="card.scm.d">Status perubahan, commit, push dan pull langsung dari sidebar — tanpa keluar dari editor.</p>
           </article>
 
           <article class="card reveal">
@@ -204,7 +209,7 @@
               </svg>
             </div>
             <h3>API Client</h3>
-            <p>Klien REST bawaan: susun permintaan, tambah header, kirim, lalu periksa respons dalam satu tab.</p>
+            <p data-i18n="card.api.d">Klien REST bawaan: susun permintaan, tambah header, kirim, lalu periksa respons dalam satu tab.</p>
           </article>
 
           <article class="card reveal">
@@ -215,7 +220,7 @@
               </svg>
             </div>
             <h3>Skill / Plan</h3>
-            <p>Kelola AGENTS.md, daftar plan per proyek, dan riwayat penyimpanan berkas — semuanya dari satu panel.</p>
+            <p data-i18n="card.skill.d">Kelola AGENTS.md, daftar plan per proyek, dan riwayat penyimpanan berkas — semuanya dari satu panel.</p>
           </article>
 
           <article class="card reveal">
@@ -227,7 +232,7 @@
               </svg>
             </div>
             <h3>Database</h3>
-            <p>Telusuri skema, lihat tabel dan kolom, lalu buka kanvas relasi antar tabel.</p>
+            <p data-i18n="card.db.d">Telusuri skema, lihat tabel dan kolom, lalu buka kanvas relasi antar tabel.</p>
           </article>
 
           <article class="card reveal">
@@ -237,7 +242,7 @@
               </svg>
             </div>
             <h3>Terminal</h3>
-            <p>Dua terminal: kolom kanan untuk agen AI CLI, panel bawah untuk menjalankan build dan uji.</p>
+            <p data-i18n="card.term.d">Dua terminal: kolom kanan untuk agen AI CLI, panel bawah untuk menjalankan build dan uji.</p>
           </article>
 
           <article class="card reveal">
@@ -247,8 +252,8 @@
                 <path d="M3 10h18M11 4v16" />
               </svg>
             </div>
-            <h3>Split editor</h3>
-            <p>Buka sampai empat panel dalam satu jendela, termasuk tata letak dua kolom, grid, dan campuran.</p>
+            <h3 data-i18n="card.split.t">Split editor</h3>
+            <p data-i18n="card.split.d">Buka sampai empat panel dalam satu jendela, termasuk tata letak dua kolom, grid, dan campuran.</p>
           </article>
         </div>
       </div>
@@ -258,9 +263,9 @@
     <section class="section section-alt" id="nxc">
       <div class="wrap nxc-grid">
         <div class="reveal">
-          <span class="eyebrow">Kenapa NxCode IDE</span>
-          <h2>Ringan, native,<br />dan langsung produktif.</h2>
-          <p class="lead">
+          <span class="eyebrow" data-i18n="about.eyebrow">Kenapa NxCode IDE</span>
+          <h2 data-i18n="about.title">Ringan, native,<br />dan langsung produktif.</h2>
+          <p class="lead" data-i18n="about.lead">
             NxCode IDE dirancang sebagai satu jendela untuk seluruh alur kerja:
             buka proyek, tulis kode, jalankan terminal, kelola versi, uji API,
             dan telusuri database — tanpa berpindah-pindah aplikasi. Semuanya
@@ -268,23 +273,23 @@
             memori.
           </p>
           <ul class="check-list">
-            <li>Buka dalam sekejap — tanpa peramban, tanpa runtime berat.</li>
-            <li>Penyorotan sintaks 400+ bahasa siap dipakai.</li>
-            <li>Tema gelap/terang dan pengaturan yang tersimpan otomatis.</li>
+            <li data-i18n="about.check1">Buka dalam sekejap — tanpa peramban, tanpa runtime berat.</li>
+            <li data-i18n="about.check2">Penyorotan sintaks 400+ bahasa siap dipakai.</li>
+            <li data-i18n="about.check3">Tema gelap/terang dan pengaturan yang tersimpan otomatis.</li>
           </ul>
         </div>
         <div class="reveal">
           <table class="matrix">
             <thead>
-              <tr><th>Yang kamu butuhkan</th><th>NxCode IDE</th></tr>
+              <tr><th data-i18n="about.th1">Yang kamu butuhkan</th><th>NxCode IDE</th></tr>
             </thead>
             <tbody>
-              <tr><td>Editor kode dengan penyorotan sintaks</td><td class="yes">✓</td></tr>
-              <tr><td>Autocomplete per tipe berkas</td><td class="yes">✓</td></tr>
-              <tr><td>Explorer &amp; pencarian proyek</td><td class="yes">✓</td></tr>
-              <tr><td>Terminal &amp; agen AI</td><td class="yes">✓</td></tr>
-              <tr><td>Source control dan build</td><td class="yes">✓</td></tr>
-              <tr><td>API client &amp; database designer</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="about.row1">Editor kode dengan penyorotan sintaks</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="about.row2">Autocomplete per tipe berkas</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="about.row3">Explorer &amp; pencarian proyek</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="about.row4">Terminal &amp; agen AI</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="about.row5">Source control dan build</td><td class="yes">✓</td></tr>
+              <tr><td data-i18n="about.row6">API client &amp; database designer</td><td class="yes">✓</td></tr>
             </tbody>
           </table>
         </div>
@@ -295,10 +300,10 @@
     <section class="section" id="tangkapan">
       <div class="wrap">
         <header class="section-head reveal">
-          <h2>Tangkapan layar</h2>
-          <p id="galleryNote">Klik gambar untuk memperbesar.</p>
+          <h2 data-i18n="shot.title">Tangkapan layar</h2>
+          <p id="galleryNote" data-i18n="shot.note">Klik gambar untuk memperbesar.</p>
         </header>
-        <div class="gallery" id="gallery"><span class="loading">Memuat…</span></div>
+        <div class="gallery" id="gallery"><span class="loading" data-i18n="shot.loading">Memuat…</span></div>
       </div>
     </section>
 
@@ -306,8 +311,8 @@
     <section class="section section-alt" id="pintasan">
       <div class="wrap">
         <header class="section-head reveal">
-          <h2>Pintasan papan tombol</h2>
-          <p>Rasa yang sama seperti editor populer, jadi langsung terasa akrab.</p>
+          <h2 data-i18n="sc.title">Pintasan papan tombol</h2>
+          <p data-i18n="sc.sub">Rasa yang sama seperti editor populer, jadi langsung terasa akrab.</p>
         </header>
         <div class="shortcuts">
           <div class="sc reveal"><span>Command Palette</span><kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>P</kbd></div>
@@ -326,9 +331,9 @@
     <section class="section" id="unduh" data-os-default="windows">
       <div class="wrap download-grid os-active-windows" id="downloadGrid">
         <div class="reveal">
-          <span class="eyebrow">Unduh</span>
-          <h2>Jalankan NxCode IDE di komputermu</h2>
-          <p class="lead">
+          <span class="eyebrow" data-i18n="dl.eyebrow">Unduh</span>
+          <h2 data-i18n="dl.title">Jalankan NxCode IDE di komputermu</h2>
+          <p class="lead" data-i18n="dl.lead">
             Pilih sistem operasimu, unduh paketnya, lalu langsung jalankan —
             tanpa perlu menyiapkan tool build apa pun.
           </p>
@@ -349,24 +354,24 @@
           </div>
 
           <div class="reqs">
-            <h4>Kebutuhan</h4>
+            <h4 data-i18n="dl.req">Kebutuhan</h4>
             <ul class="check-list" data-req="windows">
-              <li>Windows 10 (1809+) atau Windows 11, 64-bit.</li>
-              <li>NxCode IDE — cukup unduh dan jalankan installer.</li>
+              <li data-i18n="dl.req.win1">Windows 10 (1809+) atau Windows 11, 64-bit.</li>
+              <li data-i18n="dl.req.win2">NxCode IDE — cukup unduh dan jalankan installer.</li>
             </ul>
             <ul class="check-list" data-req="macos">
-              <li>macOS 12+ (Intel atau Apple Silicon), 64-bit.</li>
-              <li>Belum tersedia — paket <code>.dmg</code> untuk macOS sedang disiapkan.</li>
+              <li data-i18n="dl.req.mac1">macOS 12+ (Intel atau Apple Silicon), 64-bit.</li>
+              <li data-i18n="dl.req.mac2">Belum tersedia — paket <code>.dmg</code> untuk macOS sedang disiapkan.</li>
             </ul>
             <ul class="check-list" data-req="linux">
-              <li>Distribusi Linux 64-bit dengan Qt 6 (mis. Ubuntu 22.04+).</li>
-              <li>Ekstrak <code>tar.gz</code> lalu jalankan <code>./editor</code>.</li>
+              <li data-i18n="dl.req.lin1">Distribusi Linux 64-bit dengan Qt 6 (mis. Ubuntu 22.04+).</li>
+              <li data-i18n="dl.req.lin2">Ekstrak <code>tar.gz</code> lalu jalankan <code>./editor</code>.</li>
             </ul>
           </div>
 
           <div class="cta-row">
             <a class="btn btn-primary btn-lg" href="https://github.com/nxcodeobject/nxcode-ide/releases/latest/download/NxCode-IDE-Setup-1.0.0.exe" data-dl data-dl-windows="https://github.com/nxcodeobject/nxcode-ide/releases/latest/download/NxCode-IDE-Setup-1.0.0.exe" data-dl-macos="https://github.com/nxcodeobject/nxcode-ide/releases" data-dl-linux="https://github.com/nxcodeobject/nxcode-ide/releases/latest/download/NxCode-IDE-1.0.0-linux-x64.tar.gz" download>Unduh untuk Windows</a>
-            <a class="btn btn-ghost btn-lg" href="https://github.com/nxcodeobject/nxcode-ide/releases" target="_blank" rel="noopener">Semua rilis</a>
+            <a class="btn btn-ghost btn-lg" href="https://github.com/nxcodeobject/nxcode-ide/releases" target="_blank" rel="noopener" data-i18n="dl.all">Semua rilis</a>
           </div>
           <p class="hero-meta" data-artifact="windows">NxCode-IDE-Setup-1.0.0.exe</p>
           <p class="hero-meta" data-artifact="macos">Belum tersedia</p>
@@ -375,24 +380,24 @@
 
         <div class="steps reveal">
           <div class="step">
-            <div class="step-head"><span>1</span> Unduh</div>
-            <p class="step-note" data-out="windows">
+            <div class="step-head"><span>1</span> <span data-i18n="dl.step1">Unduh</span></div>
+            <p class="step-note" data-out="windows" data-i18n="dl.step1.win">
               Unduh <code>NxCode-IDE-Setup-1.0.0.exe</code>, lalu jalankan.
               Karena belum ditandatangani, Windows SmartScreen mungkin muncul —
               pilih <b>More info</b> lalu <b>Run anyway</b>.
             </p>
             <p class="step-note" data-out="macos">
-              Paket macOS belum tersedia. Nantikan rilisnya di halaman
+              <span data-i18n="dl.step1.mac1">Paket macOS belum tersedia. Nantikan rilisnya di halaman</span>
               <a href="https://github.com/nxcodeobject/nxcode-ide/releases" target="_blank" rel="noopener">GitHub Releases</a>.
             </p>
-            <p class="step-note" data-out="linux">
+            <p class="step-note" data-out="linux" data-i18n="dl.step1.lin">
               Unduh <code>NxCode-IDE-1.0.0-linux-x64.tar.gz</code>, ekstrak, lalu
               jalankan <code>./editor</code>. Pastikan Qt 6 terpasang di sistem.
             </p>
           </div>
           <div class="step">
-            <div class="step-head"><span>2</span> Jalankan</div>
-            <p class="step-note">
+            <div class="step-head"><span>2</span> <span data-i18n="dl.step2">Jalankan</span></div>
+            <p class="step-note" data-i18n="dl.step2.note">
               Buka aplikasi, lalu mulai mengerjakan proyekmu: buka folder,
               tulis kode, dan jalankan terminal agen AI — semuanya dari satu
               jendela.
@@ -413,16 +418,16 @@
           </div>
         </div>
         <div class="footer-links">
-          <a href="#fitur">Fitur</a>
-          <a href="#tangkapan">Tangkapan Layar</a>
-          <a href="#nxc">Tentang</a>
-          <a href="#pintasan">Pintasan</a>
-          <a href="#unduh">Unduh</a>
+          <a href="#fitur" data-i18n="nav.fitur">Fitur</a>
+          <a href="#tangkapan" data-i18n="nav.tangkapan">Tangkapan Layar</a>
+          <a href="#nxc" data-i18n="nav.tentang">Tentang</a>
+          <a href="#pintasan" data-i18n="nav.pintasan">Pintasan</a>
+          <a href="#unduh" data-i18n="nav.unduh">Unduh</a>
         </div>
       </div>
       <div class="wrap footer-bottom">
         <span>© 2026 NxCode IDE.</span>
-        <span>Cepat · Native · Multi-platform</span>
+        <span data-i18n="footer.tagline">Cepat · Native · Multi-platform</span>
       </div>
     </footer>
 
