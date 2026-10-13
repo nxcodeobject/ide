@@ -100,3 +100,22 @@ aksen biru) — **bukan** tiruan editor di HTML.
 - **macOS**: **tidak dapat diuji dari Windows**; perlu dijalankan di mesin Mac.
 
 **SUDAH DIEKSEKUSI ✅** (Linux/macOS masih perlu uji di mesin aslinya)
+
+---
+
+# Pembaruan versi di website (13-10-2026)
+
+Versi unduhan Windows dinaikkan dari `1.0.0` -> **`1.0.5`** agar selaras rilis
+terbaru (`github.com/nxcodeobject/nxcode-ide/releases`). Diperbarui di:
+- `index.html`: meta hero ("v1.0.5 · Windows & Linux"), link tombol unduh
+  (`NxCode-IDE-Setup-1.0.5.exe`), `data-artifact` Windows, teks langkah unduh.
+- `index.js`: teks i18n `dl.step1.win` (ID + EN).
+- Card fitur baru **Markdown & PDF** (pratinjau, ekspor HTML/PDF, buka PDF)
+  di `index.html` + i18n `card.pdf.t` / `card.pdf.d`.
+
+Catatan: link Windows memakai nama file berversi (`.../latest/download/
+NxCode-IDE-Setup-1.0.5.exe`) sehingga **harus diperbarui tiap rilis** — kalau
+lupa, akan 404 begitu `latest` berganti. Linux masih `1.0.0` (belum ada rilis
+Linux baru).
+
+**SUDAH DIEKSEKUSI ✅**
